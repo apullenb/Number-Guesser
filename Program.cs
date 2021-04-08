@@ -37,6 +37,12 @@ namespace NumberGuesser
             while(guess != correctNumber)
             {
                 string input = Console.ReadLine();
+                if (!int.TryParse(input, out guess)) {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("WRONG!! {0} is not a number. Please enter a number..", input);
+                    Console.ResetColor();
+                    continue;
+                }
                 guess = Int32.Parse(input);
 
                 if(guess != correctNumber)
@@ -45,12 +51,11 @@ namespace NumberGuesser
                     Console.WriteLine("{0} is not the correct number. Please try again.", input);
                     Console.ResetColor();
                     Console.WriteLine("Guess a number between 1 and 10");
-
                 }
-
             }
-
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Great Job {0}! {1} is the correct Number!", inputName, guess);
+            Console.ResetColor();
 
 
         }
