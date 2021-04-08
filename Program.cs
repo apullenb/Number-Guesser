@@ -1,12 +1,19 @@
 ﻿using System;
 
+
 namespace NumberGuesser
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            string name = "andrea";
+            int age = 35;
+
+            Console.WriteLine("{0} is {1}" , name, age);
+
+
         }
     }
 }
