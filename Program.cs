@@ -29,7 +29,9 @@ namespace NumberGuesser
             Console.WriteLine("Hello {0}, let's play a game!", inputName);
 
             // Init correct number
-            int correctNumber = 7;
+            
+            Random random = new Random();
+            int correctNumber = random.Next(1, 10);
 
             int guess = 0;
             Console.WriteLine("Guess a number between 1 and 10");
