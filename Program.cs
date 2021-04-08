@@ -8,10 +8,16 @@ namespace NumberGuesser
         static void Main(string[] args)
         {
 
-            string name = "andrea";
-            int age = 35;
+            //Set app vars
 
-            Console.WriteLine("{0} is {1}" , name, age);
+            string appName = "Number Guesser";
+            string appVersion = "1.0.0";
+            string appAuthor = "Andrea";
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            //Write app info
+            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
 
 
         }
